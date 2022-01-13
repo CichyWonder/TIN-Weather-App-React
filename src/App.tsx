@@ -1,15 +1,32 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt } from '@fortawesome/free-solid-svg-icons'
 import './style.css';
+import CityComponent from "./modules/CityComponent";
+import WeatherComponent from "./modules/WeatherComponent";
 
 //Setup FontAwesome
 
 //Setup Komponentów styled
+const Background = styled.div`
+  //height 100% nie działa
+  height: 100vh;
+  font-family: 'Staatliches', cursive;
+`;
+//Animacja loga
+const animation = keyframes`
+  from{
+    font-size: 12px;
+    opacity: 0;
+  }
+  to{
+    font-size: 50px;
+  }
+`;
 const AnimatedLogo = styled.p`
   font-size: 50px;
-  opacity: 50%;
+  animation: ${animation} 4s ease;
 `;
 const Container = styled.div`
   display: flex;
@@ -17,31 +34,24 @@ const Container = styled.div`
   margin: auto;
   align-items: center;
   box-shadow: 0 2em 8em #442747;
-  padding: 20px 10px;
+  padding: 30px 10px;
   border-radius: 20px;
   width: 580px;
-  height: 100%;
 `;
-const CityComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const WeatherComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+
 const Label = styled.span`
-  font-size: 18px;
   font-weight: bold;
+  opacity: 0.6;
 `;
 
 function App() {
   return (
+      <Background>
     <Container>
-     <Label>Magenta Weather App</Label> <AnimatedLogo> <FontAwesomeIcon icon={faBolt} /> </AnimatedLogo>
-    <CityComponent></CityComponent>
-    <WeatherComponent></WeatherComponent>
+      <Label><AnimatedLogo> <FontAwesomeIcon icon={faBolt} />&nbsp;Magenta Weather App</AnimatedLogo></Label>
+    <CityComponent/>
     </Container>
+      </Background>
   );
 }
 

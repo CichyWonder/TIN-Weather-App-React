@@ -1,5 +1,6 @@
 /*Styled components nie obsługuje gradientów a bardzo chciałem zrobić animacje*/
-body{
+
+#root{
     background-image: linear-gradient(
             1deg,
             #B31DE8,
@@ -9,8 +10,8 @@ body{
             #e443bb,
             #e4439e,
             #FF6ABB);
-    background-size: 600%;
-    animation: bg-animation 8s infinite alternate;
+    background-size: 3000%;
+    animation: bg-animation 5s infinite alternate;
 }
 @keyframes bg-animation {
     0%{
