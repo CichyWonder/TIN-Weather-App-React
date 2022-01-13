@@ -1,25 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBolt } from '@fortawesome/free-solid-svg-icons'
+import './style.css';
+
+//Setup FontAwesome
+
+//Setup Komponentów styled
+const AnimatedLogo = styled.p`
+  font-size: 50px;
+  opacity: 50%;
+`;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  box-shadow: 0 2em 8em #442747;
+  padding: 20px 10px;
+  border-radius: 20px;
+  width: 580px;
+  height: 100%;
+`;
+const CityComponent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const WeatherComponent = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Label = styled.span`
+  font-size: 18px;
+  font-weight: bold;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+     <Label>Magenta Weather App</Label> <AnimatedLogo> <FontAwesomeIcon icon={faBolt} /> </AnimatedLogo>
+    <CityComponent></CityComponent>
+    <WeatherComponent></WeatherComponent>
+    </Container>
   );
 }
 
