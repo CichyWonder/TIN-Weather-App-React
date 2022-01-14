@@ -1,9 +1,9 @@
 # Użyte Frameworki
-Open weather api
-Fontawasome 
-Styled-components
-Axios
-React.js
+Open weather Api,
+Fontawasome,
+Styled-components,
+Axios,
+React.js,
 
 # Getting Started with Create React App
 
