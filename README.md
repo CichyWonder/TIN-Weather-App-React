@@ -4,6 +4,8 @@ Fontawasome,
 Styled-components,
 Axios,
 React.js,
+![image](https://user-images.githubusercontent.com/26149044/149555824-50430e28-c568-4f11-836b-b63c99929818.png)
+![image](https://user-images.githubusercontent.com/26149044/149555960-7da33612-db44-4fea-88f0-354c45be7b6f.png)
 
 # Getting Started with Create React App
 
