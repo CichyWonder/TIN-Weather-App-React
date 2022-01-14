@@ -63,14 +63,17 @@ const SearchBox = styled.form`
 
 
 //Funkcja
-const CityComponent = ()=>{
+const CityComponent = (props)  =>{
+
+    const { updateCity, fetchWeather } = props;
     return (
-        <>
+    <>
         <WeatherLogo> <FontAwesomeIcon icon={faCloudSun} size="10x"/></WeatherLogo>
-        <ChoseCity> Wpisz miasto aby zobaczyć pogodę</ChoseCity>
-        <SearchBox>
-            <input placeholder="Miasto"/>
-            <button>Szukaj</button>
+        <ChoseCity> Search for your city</ChoseCity>
+        <SearchBox onSubmit={fetchWeather}>
+            <input onChange={(e) => updateCity(e.target.value)}
+                   placeholder="City"/>
+            <button type={"submit"}>Search</button>
         </SearchBox>
         </>
     );
